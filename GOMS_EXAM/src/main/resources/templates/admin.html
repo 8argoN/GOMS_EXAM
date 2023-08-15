@@ -2,9 +2,38 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G&G AdminPage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 <body>
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-sm-15 col-md-10 col-lg-6 col-xl-1 col-xxl-9 g-0">
+            <div class="container text-bg-primary row gx-0">
+                <h4 class="col-sm-7 ">G&G試験管理サイト</h4>
+                <div class="col-sm-3 d-flex align-items-center justify-content-end " >
+                    <h6 class="text-center m-0">最終ログイン：2023/08/15</h6>
+                </div>
+                <div class="col-sm-2 d-flex align-items-center justify-content-end">
+                    <button type="submit" class="btn btn-primary btn-block" onclick="logout()">ログアウト</button>
+                </div>
+            </div>
 
+        </div>
+    </div>
+</div>
+<script>
+        function logout() {
+            // confirm() 대화상자를 표시하여 사용자로부터 확인 여부를 받음
+            var logoutResult = confirm("ログアウトしますか？");
+            if (logoutResult) {
+                // 사용자가 "Yes"를 눌렀을 경우
+                window.location.href = "http://localhost:8080/GOMS_EXAM/login";
+            } else {
+            }
+        }
+    </script>
 </body>
 </html>
