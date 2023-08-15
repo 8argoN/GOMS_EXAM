@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class ExamController{
-    @Autowired
-    private ExamService examService;
+//    @Autowired
+//    private ExamService examService;
     @GetMapping("/GOMS_EXAM/login")
     public String loginForm(){
         return "login";
