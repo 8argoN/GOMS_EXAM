@@ -1,4 +1,22 @@
 # GOMS_EXAM
+```
+作業環境
+
+開発環境: IntelliJ IDEA
+開発言語: JAVA
+Develop: SpringBoot
+Design: BootStrap5
+DB: MariaDB
+
+Spring Initializerの使用方法
+
+1. Project: Groovy
+2. Language: Java
+3. Spring boot: 3.1.2
+4. Packaging: Jar
+5. Java: 17
+6. Dependencies: Lombok, Spring Boot Dev Tools, Spring Web, Spring data JPA, Thymeleaf, MariaDB Driver
+```
 
 ## How to start GOMS_EXAM
 ```
