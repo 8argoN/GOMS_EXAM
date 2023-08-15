@@ -9,7 +9,8 @@
 
 ### How to git GOMS_EXAM 
 ```  
-click GIT 
+click GIT
+
 git commit-> "Anything you want"  
 git push-> origin main  
 
