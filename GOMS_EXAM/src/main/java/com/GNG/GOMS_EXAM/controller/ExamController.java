@@ -17,28 +17,21 @@ import org.springframework.web.bind.annotation.*;
 public class ExamController {
     //    @Autowired
     private final ExamService examService;
-//    @Autowired
-//    ExamRepository examRepository;
-//    Exam exam;
     @GetMapping("/GOMS_EXAM/login")
     public String loginForm() {
 
         return "login";
     }
 
-    //    @PostMapping("/GOMS_EXAM/login")
-//    public String loginData(@RequestParam("userEmail") String userEmail, @RequestParam("userPw") String userPw){
-//        System.out.println("ExamController.login");
-//        System.out.println("userEmail = " + userEmail + ", userPw = " + userPw);
-//        return "footer";
-//    }
     @PostMapping("/GOMS_EXAM/login")
     public String loginData(@ModelAttribute admin_infoDTO dto, HttpSession session) {
         admin_infoDTO loginResult = examService.login(dto);
         if (loginResult != null) {
             session.setAttribute("loginEmail", loginResult.getUser_id());
+            System.out.println("success");
             return "admin";
         } else {
+            System.out.println("fail");
             return "login";
         }
 
