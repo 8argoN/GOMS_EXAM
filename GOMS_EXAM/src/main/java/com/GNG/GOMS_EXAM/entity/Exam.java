@@ -1,21 +1,24 @@
 package com.GNG.GOMS_EXAM.entity;
 
 //import com.GNG.GOMS_EXAM.dto.admin_infoDTO;
+import com.GNG.GOMS_EXAM.dto.admin_infoDTO;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 @Entity
 @Data /*Getter,Setter*/
 @Table(name="admin_info")
-@Builder
-@AllArgsConstructor
-@NoArgsConstructor
 public class Exam {
-    @Id
-    private String user_id;
-    private String user_pw;
+    @Id /*PK*/
+    private String userid;
+    @Column
+    private String userpw;
+
+    public static Exam exam(admin_infoDTO dto){
+        Exam exam=new Exam();
+        exam.setUserid(dto.getUser_id());
+        exam.setUserpw(dto.getUser_pw());
+        return exam;
+    }
 
 }

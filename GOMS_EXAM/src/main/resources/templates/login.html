@@ -14,17 +14,17 @@
             <div class="card">
                 <div class="card-header text-center"><h1><img src="/static/images/GNG_logo.png" alt="HD Logo" width="80" height="60">G&G試験管理サイト</h1></div>
                 <div class="card-body">
-                    <form>
+                    <form action="/GOMS_EXAM/login" method="post">
                         <div class="mb-5 row">
                             <label for="username" class="col-sm-2 col-form-label">ID</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="username" placeholder="IDを入力ください">
+                                <input type="text" class="form-control" id="username" name="User_id" placeholder="IDを入力ください">
                             </div>
                         </div>
                         <div class="mb-5 row">
                             <label for="password" class="col-sm-2 col-form-label">パスワード</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" id="password" placeholder="パスワードを入力ください">
+                                <input type="password" class="form-control" id="password" name="User_pw" placeholder="パスワードを入力ください">
                             </div>
                         </div>
                         <div class="text-center">

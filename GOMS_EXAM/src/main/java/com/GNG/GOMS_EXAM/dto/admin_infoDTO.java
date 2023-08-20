@@ -1,35 +1,19 @@
 package com.GNG.GOMS_EXAM.dto;
 import com.GNG.GOMS_EXAM.entity.Exam;
+import lombok.*;
 
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 public class admin_infoDTO {
         private String user_id,user_pw;
-
-        public admin_infoDTO() {}
-        public admin_infoDTO(String id, String pw) {
-            this.user_id = id;
-            this.user_pw = pw;
-
-        }
-
-        public String getUser_id() {
-            return user_id;
-        }
-
-        public void setUser_id(String id) {
-            this.user_id =id;
-        }
-
-
-        public String getUser_pw() {
-            return user_pw;
-        }
-
-        public void setUser_pw(String pw) {
-            this.user_pw=pw;
-        }
-
-        public Exam toEntity() {
-            return new Exam(user_id,user_pw);
+        public static admin_infoDTO toAdmin_dto(Exam exam) {
+            admin_infoDTO dto=new admin_infoDTO();
+            dto.setUser_id(exam.getUserid());
+            dto.setUser_pw(exam.getUserpw());
+            return dto;
         }
 
     }
